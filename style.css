@@ -101,8 +101,9 @@ h2 em {
 .intro {
   color: var(--muted);
   font-size: 15px;
-  margin-top: 45px;
+  margin-top: 35px;
   line-height: 1.8;
+  max-width: 420px;
 }
 
 .button {
