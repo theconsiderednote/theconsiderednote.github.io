@@ -1,0 +1,265 @@
+/* =========================================
+   THE CONSIDERED NOTE
+   Main stylesheet
+   ========================================= */
+
+:root {
+  --cream: #faf9f7;
+  --white: #ffffff;
+  --ink: #191717;
+  --muted: #77706f;
+  --burgundy: #741f2b;
+  --light-line: #ddd8d5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 5vw;
+  border-bottom: 1px solid var(--light-line);
+}
+
+.logo {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  color: var(--burgundy);
+}
+
+/* Hero */
+
+.hero {
+  min-height: 82vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 100px 10vw;
+}
+
+.eyebrow {
+  color: var(--burgundy);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(64px, 10vw, 150px);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 0.88;
+  max-width: 900px;
+}
+
+.hero h1 em,
+h2 em {
+  color: var(--burgundy);
+  font-style: italic;
+}
+
+.intro {
+  color: var(--muted);
+  font-size: 15px;
+  margin-top: 45px;
+  line-height: 1.8;
+}
+
+.button {
+  align-self: flex-start;
+  background: var(--burgundy);
+  color: white;
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  margin-top: 35px;
+  padding: 14px 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background: var(--ink);
+}
+
+/* General sections */
+
+.section {
+  border-top: 1px solid var(--light-line);
+  padding: 120px 10vw;
+}
+
+.two-column {
+  display: grid;
+  gap: 80px;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: start;
+}
+
+h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(40px, 5vw, 72px);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}
+
+.two-column > p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.9;
+  max-width: 450px;
+}
+
+/* Work */
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.work-card {
+  border-top: 1px solid var(--ink);
+  padding-top: 15px;
+}
+
+.placeholder {
+  align-items: center;
+  background: #eeeae7;
+  color: var(--burgundy);
+  display: flex;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 55px;
+  height: 350px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.work-card p {
+  color: var(--burgundy);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  margin-bottom: 8px;
+}
+
+.work-card h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+/* Journal */
+
+.journal {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-link {
+  color: var(--burgundy);
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  margin-top: 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+
+footer {
+  border-top: 1px solid var(--light-line);
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 5vw;
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+  header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  nav {
+    gap: 18px;
+  }
+
+  .hero {
+    min-height: 75vh;
+    padding: 80px 7vw;
+  }
+
+  .section {
+    padding: 80px 7vw;
+  }
+
+  .two-column {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .placeholder {
+    height: 280px;
+  }
+
+  footer {
+    padding: 25px 7vw;
+  }
+}
